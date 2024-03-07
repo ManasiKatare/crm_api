@@ -34,7 +34,7 @@ COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
 # Install Project files from the repo
 RUN cd /; mkdir -p aqveir; \
     cd /aqveir; \
-    git clone https://github.com/aqveir/crm_api.git aqveir-api;
+    git clone https://github.com/ManasiKatare/crm_api.git aqveir-api;
 RUN cd /aqveir/aqveir-api
 
 WORKDIR /aqveir/aqveir-api

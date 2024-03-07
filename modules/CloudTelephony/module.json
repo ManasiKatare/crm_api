@@ -1,0 +1,14 @@
+{
+    "name": "CloudTelephony",
+    "alias": "cloudtelephony",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\CloudTelephony\\Providers\\CloudTelephonyServiceProvider",
+        "Modules\\CloudTelephony\\Providers\\EventServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,14 @@
+{
+    "name": "MailParser",
+    "alias": "mailparser",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MailParser\\Providers\\MailParserServiceProvider",
+        "Modules\\MailParser\\Providers\\EventServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

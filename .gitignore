@@ -1,0 +1,46 @@
+/.phpunit.cache
+/public/build
+/public/hot
+
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/packages
+/storage/logs/*
+
+# Ignore files relating to environment 
+.env
+.env.backup
+.env.production
+
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Adding Application level files
+/resources/views/vendor
+/storage/api-docs/api-docs.json
+/storage/framework/laravel-excel/*
+
+# Ignore folders in public folder
+/public/*
+
+# Include some folder in public folder
+!/public/css
+!/public/fonts
+!/public/images
+!/public/js

@@ -1,0 +1,49 @@
+version: 0.0
+os: linux
+
+#
+# Copy the LICENSE and other file for CodeDeploy
+#
+# files:
+#   - source: LICENSE.md
+#     destination: /ellaisys/solutions/crmomni/$DEPLOYMENT_GROUP_NAME
+
+# permissions:
+#   - object: /ellaisys/solutions/crmomni/$DEPLOYMENT_GROUP_NAME
+#     pattern: "**"
+#     owner: ec2-user
+#     mode: 775
+#     type:
+#       - file
+hooks:
+  BeforeInstall:
+    - location: scripts/devops/before_install.sh
+      timeout: 300
+      runas: root
+    - location: scripts/devops/install_dependencies.sh
+      timeout: 3000
+      runas: root
+    - location: scripts/devops/install_code.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/devops/change_permissions.sh
+      timeout: 300
+      runas: root
+    - location: scripts/devops/clear_logs.sh
+      timeout: 300
+      runas: root
+  #   - location: scripts/devops/crmomni_reload.sh
+  #     timeout: 300
+  #     runas: root
+  ApplicationStart:
+    - location: scripts/devops/clear_logs.sh
+      timeout: 300
+      runas: root
+    - location: scripts/devops/start_application.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/devops/stop_application.sh
+      timeout: 300
+      runas: root

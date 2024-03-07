@@ -1,0 +1,15 @@
+{
+    "Boilerplate": true,
+    "Core": true,
+    "Contact": true,
+    "User": true,
+    "Note": true,
+    "Document": true,
+    "Feedback": true,
+    "Subscription": true,
+    "Preference": true,
+    "CloudTelephony": true,
+    "ServiceRequest": true,
+    "Account": true,
+    "MailParser": true
+}
